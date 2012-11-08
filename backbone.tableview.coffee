@@ -388,7 +388,7 @@ class Backbone.TableView.ButtonFilter extends Backbone.TableView.Filter
 class Backbone.TableView.ButtonGroupFilter extends Backbone.TableView.Filter
     template: _.template """
         <% _.each(options, function (el, i) { %>
-            <button class="btn <%= _.contains(init, el.value) ? "active" : "" %> <%= !_.isUndefined(el.className) ? el.className : "" %>" value="<%= el.value %>"><%= el.name %></button>
+            <div class="btn <%= _.contains(init, el.value) ? "active" : "" %> <%= !_.isUndefined(el.className) ? el.className : "" %>" value="<%= el.value %>"><%= el.name %></div>
         <% }) %>
     """
     className: "btn-group pull-left tableview-filterbox"

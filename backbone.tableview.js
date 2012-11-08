@@ -511,7 +511,7 @@ Optionally it supports pagination, search, and any number of filters
       return ButtonGroupFilter.__super__.constructor.apply(this, arguments);
     }
 
-    ButtonGroupFilter.prototype.template = _.template("<% _.each(options, function (el, i) { %>\n    <button class=\"btn <%= _.contains(init, el.value) ? \"active\" : \"\" %> <%= !_.isUndefined(el.className) ? el.className : \"\" %>\" value=\"<%= el.value %>\"><%= el.name %></button>\n<% }) %>");
+    ButtonGroupFilter.prototype.template = _.template("<% _.each(options, function (el, i) { %>\n    <div class=\"btn <%= _.contains(init, el.value) ? \"active\" : \"\" %> <%= !_.isUndefined(el.className) ? el.className : \"\" %>\" value=\"<%= el.value %>\"><%= el.name %></div>\n<% }) %>");
 
     ButtonGroupFilter.prototype.className = "btn-group pull-left tableview-filterbox";
 
